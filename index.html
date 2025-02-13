@@ -6,65 +6,67 @@
     <title>Leyenda RP</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="min-h-screen bg-gray-900 text-gray-100">
+<body class="min-h-screen bg-black text-red-500">
 
-    <!-- Contenedor principal -->
-    <div class="flex">
-
-        <!-- Menú lateral (inicia abierto) -->
-        <nav id="menu" class="w-64 bg-gray-800 h-screen fixed top-0 left-0 transform translate-x-0 transition-transform duration-300 ease-in-out border-r border-gray-700">
-            <button id="menu-close" class="absolute top-3 right-3 text-gray-400 hover:text-white focus:outline-none">
-                ✖ <!-- Icono de cerrar -->
-            </button>
-            <ul class="mt-12 space-y-4">
-                <li><a href="#" class="block px-6 py-3 text-gray-300 hover:bg-gray-700">Inicio</a></li>
-                <li><a href="#" class="block px-6 py-3 text-gray-300 hover:bg-gray-700">Reglas</a></li>
-                <li><a href="#" class="block px-6 py-3 text-gray-300 hover:bg-gray-700">Foro</a></li>
-                <li><a href="#" class="block px-6 py-3 text-gray-300 hover:bg-gray-700">Contacto</a></li>
-            </ul>
-        </nav>
-
-        <!-- Contenido principal -->
-        <div class="flex-1 p-6 transition-margin duration-300 ml-64" id="content">
-            <header class="flex items-center justify-between bg-gray-800 border-b border-gray-700 p-4">
-                <div class="flex items-center space-x-4">
-                    <button id="menu-open" class="text-gray-400 hover:text-white focus:outline-none hidden">
-                        &#9776; <!-- Icono de menú -->
-                    </button>
-                    <img src="https://i.ibb.co/BHpB14r/logo.png" alt="Perfil" class="w-10 h-10 rounded-full border-2 border-gray-500">
-                    <h1 class="text-xl font-bold">Leyenda RP</h1>
-                </div>
-                <div class="relative">
-                    <input type="text" placeholder="Buscar..."
-                        class="bg-gray-700 text-white px-4 py-2 rounded-lg w-64 focus:outline-none focus:ring-2 focus:ring-red-500">
-                    <div class="absolute right-3 top-2.5 text-gray-400">🔍</div>
-                </div>
-            </header>
-
-            <h2 class="text-3xl font-bold mt-6">Bienvenido a Leyenda RP</h2>
-            <p class="text-gray-400">Explora nuestras reglas y guías para aprovechar al máximo tu experiencia.</p>
+    <!-- Encabezado -->
+    <header class="bg-gray-900 text-red-500 flex items-center justify-between px-6 py-4 border-b border-red-600">
+        <div class="flex items-center space-x-4">
+            <img src="https://i.ibb.co/BHpB14r/logo.png" alt="Perfil" class="w-12 h-12 rounded-full border-2 border-red-500">
+            <h1 class="text-2xl font-bold">Leyenda RP</h1>
         </div>
-        
-    </div>
+        <button id="menu-toggle" class="text-red-400 hover:text-red-300 focus:outline-none text-2xl">
+            ☰ <!-- Icono de menú -->
+        </button>
+    </header>
+
+    <!-- Menú desplegable -->
+    <nav id="menu" class="bg-gray-900 w-full border-t border-red-600 fixed top-16 left-0 transform translate-y-0 transition-transform duration-300">
+        <ul class="flex flex-wrap justify-around text-center py-3">
+            <!-- Normativas -->
+            <li class="relative group">
+                <button class="font-semibold text-red-500 hover:text-red-300">Normativas</button>
+                <ul class="absolute hidden bg-gray-900 border border-red-600 text-sm mt-2 py-2 w-48 group-hover:block">
+                    <li><a href="#" class="block px-4 py-2 hover:bg-red-800">Reglas Generales</a></li>
+                    <li><a href="#" class="block px-4 py-2 hover:bg-red-800">Actividades Ilegales</a></li>
+                    <li><a href="#" class="block px-4 py-2 hover:bg-red-800">Comercio</a></li>
+                    <li><a href="#" class="block px-4 py-2 hover:bg-red-800">Reglas Discord</a></li>
+                </ul>
+            </li>
+            <!-- Controles -->
+            <li class="relative group">
+                <button class="font-semibold text-red-500 hover:text-red-300">Controles</button>
+                <ul class="absolute hidden bg-gray-900 border border-red-600 text-sm mt-2 py-2 w-48 group-hover:block">
+                    <li><a href="#" class="block px-4 py-2 hover:bg-red-800">Comandos del Servidor</a></li>
+                    <li><a href="#" class="block px-4 py-2 hover:bg-red-800">Teclas</a></li>
+                </ul>
+            </li>
+            <!-- Locales -->
+            <li class="relative group">
+                <button class="font-semibold text-red-500 hover:text-red-300">Locales</button>
+                <ul class="absolute hidden bg-gray-900 border border-red-600 text-sm mt-2 py-2 w-48 group-hover:block">
+                    <li><a href="#" class="block px-4 py-2 hover:bg-red-800">Centro de Ciudad</a></li>
+                    <li><a href="#" class="block px-4 py-2 hover:bg-red-800">Plaza de Mercado</a></li>
+                    <li><a href="#" class="block px-4 py-2 hover:bg-red-800">Vanilla Unicorn</a></li>
+                </ul>
+            </li>
+            <!-- STAFF -->
+            <li><a href="#" class="font-semibold text-red-500 hover:text-red-300">STAFF/EQUIPO</a></li>
+        </ul>
+    </nav>
+
+    <!-- Contenido principal -->
+    <main class="p-6 mt-20">
+        <h2 class="text-3xl font-bold">Bienvenido a Leyenda RP</h2>
+        <p class="text-red-400">Explora nuestras reglas y guías para aprovechar al máximo tu experiencia en el servidor.</p>
+    </main>
 
     <script>
         const menu = document.getElementById('menu');
-        const content = document.getElementById('content');
-        const openBtn = document.getElementById('menu-open');
-        const closeBtn = document.getElementById('menu-close');
+        const toggleBtn = document.getElementById('menu-toggle');
 
-        // Cerrar menú
-        closeBtn.addEventListener('click', () => {
-            menu.classList.add('-translate-x-full');
-            content.classList.remove('ml-64');
-            openBtn.classList.remove('hidden');
-        });
-
-        // Abrir menú
-        openBtn.addEventListener('click', () => {
-            menu.classList.remove('-translate-x-full');
-            content.classList.add('ml-64');
-            openBtn.classList.add('hidden');
+        toggleBtn.addEventListener('click', () => {
+            menu.classList.toggle('translate-y-0');
+            menu.classList.toggle('-translate-y-full');
         });
     </script>
 
