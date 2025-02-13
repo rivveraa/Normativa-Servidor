@@ -7,56 +7,52 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="min-h-screen bg-gray-900 text-gray-100">
+
     <!-- Encabezado -->
-    <header class="bg-gray-800 border-b border-gray-700 p-4 flex justify-between items-center">
-        <h1 class="text-xl font-bold">Leyenda RP</h1>
-        <input type="text" placeholder="Buscar..." class="bg-gray-700 text-white px-4 py-2 rounded-lg w-64 focus:outline-none focus:ring-2 focus:ring-red-500">
-    </header>
-    
-    <div class="flex">
-        <!-- Barra lateral -->
-        <aside class="w-64 bg-gray-800 min-h-screen p-4">
-            <nav>
-                <div class="mb-4">
-                    <div class="text-white mb-2 cursor-pointer hover:bg-gray-700 p-2 rounded">📋 Normativas</div>
-                    <div class="ml-6 space-y-1 text-gray-400">
-                        <div class="hover:text-white cursor-pointer p-1 text-sm">Reglas Generales</div>
-                        <div class="hover:text-white cursor-pointer p-1 text-sm">Actividades Ilegales</div>
-                    </div>
-                </div>
-                <div class="mb-4">
-                    <div class="text-white mb-2 cursor-pointer hover:bg-gray-700 p-2 rounded">🎮 Controles</div>
-                    <div class="ml-6 space-y-1 text-gray-400">
-                        <div class="hover:text-white cursor-pointer p-1 text-sm">Comandos del Servidor</div>
-                        <div class="hover:text-white cursor-pointer p-1 text-sm">Teclas</div>
-                    </div>
-                </div>
-            </nav>
-        </aside>
-        
-        <!-- Contenido Principal -->
-        <main class="flex-1 p-6">
-            <div class="max-w-4xl mx-auto">
-                <h2 class="text-3xl font-bold mb-6">Bienvenido a nuestra Comunidad</h2>
-                <p class="text-gray-400 mb-4">Explora nuestra documentación completa y directrices.</p>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div class="bg-gray-800 p-6 rounded-lg hover:bg-gray-700 transition-colors cursor-pointer">
-                        <div class="flex items-center space-x-3 mb-3">
-                            <span class="text-2xl">📋</span>
-                            <h3 class="text-xl font-semibold">Normativas</h3>
-                        </div>
-                        <p class="text-gray-400 text-sm">Explora nuestras reglas y regulaciones.</p>
-                    </div>
-                    <div class="bg-gray-800 p-6 rounded-lg hover:bg-gray-700 transition-colors cursor-pointer">
-                        <div class="flex items-center space-x-3 mb-3">
-                            <span class="text-2xl">🎮</span>
-                            <h3 class="text-xl font-semibold">Controles</h3>
-                        </div>
-                        <p class="text-gray-400 text-sm">Aprende sobre los controles del servidor.</p>
+    <header class="bg-gray-800 border-b border-gray-700">
+        <div class="flex items-center justify-between px-4 py-3">
+            <div class="flex items-center space-x-4">
+                <button id="menu-btn" class="text-gray-400 hover:text-white focus:outline-none">
+                    &#9776; <!-- Icono de menú -->
+                </button>
+                <img src="https://i.ibb.co/BHpB14r/logo.png" alt="Perfil" class="w-10 h-10 rounded-full border-2 border-gray-500">
+                <h1 class="text-xl font-bold">Leyenda RP</h1>
+            </div>
+            
+            <div class="flex items-center space-x-4">
+                <div class="relative">
+                    <input type="text" placeholder="Buscar..."
+                        class="bg-gray-700 text-white px-4 py-2 rounded-lg w-64 focus:outline-none focus:ring-2 focus:ring-red-500">
+                    <div class="absolute right-3 top-2.5 text-gray-400">
+                        🔍 <!-- Icono de búsqueda -->
                     </div>
                 </div>
             </div>
-        </main>
-    </div>
+        </div>
+
+        <!-- Menú desplegable -->
+        <nav id="menu" class="hidden bg-gray-800 border-t border-gray-700">
+            <ul class="py-2 space-y-2">
+                <li><a href="#" class="block px-4 py-2 text-gray-300 hover:bg-gray-700">Inicio</a></li>
+                <li><a href="#" class="block px-4 py-2 text-gray-300 hover:bg-gray-700">Reglas</a></li>
+                <li><a href="#" class="block px-4 py-2 text-gray-300 hover:bg-gray-700">Foro</a></li>
+                <li><a href="#" class="block px-4 py-2 text-gray-300 hover:bg-gray-700">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Contenido principal -->
+    <main class="p-6">
+        <h2 class="text-3xl font-bold">Bienvenido a Leyenda RP</h2>
+        <p class="text-gray-400">Explora nuestras reglas y guías para aprovechar al máximo tu experiencia.</p>
+    </main>
+
+    <script>
+        document.getElementById('menu-btn').addEventListener('click', function () {
+            document.getElementById('menu').classList.toggle('hidden');
+        });
+    </script>
+
 </body>
 </html>
+
