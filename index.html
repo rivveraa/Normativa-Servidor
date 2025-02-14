@@ -19,34 +19,34 @@
         </button>
     </header>
 
-    <!-- Menú desplegable -->
-    <nav id="menu" class="bg-gray-900 w-full border-t border-red-600 fixed top-16 left-0 transform translate-y-0 transition-transform duration-300">
-        <ul class="flex flex-wrap justify-around text-center py-3">
+    <!-- Menú lateral -->
+    <nav id="menu" class="bg-gray-900 w-64 h-full fixed top-0 left-0 border-r border-red-600 transform translate-x-0 transition-transform duration-300">
+        <ul class="mt-16 p-4 space-y-4">
             <!-- Normativas -->
-            <li class="relative group">
-                <button class="font-semibold text-red-500 hover:text-red-300">Normativas</button>
-                <ul class="absolute hidden bg-gray-900 border border-red-600 text-sm mt-2 py-2 w-48 group-hover:block">
-                    <li><a href="#" class="block px-4 py-2 hover:bg-red-800">Reglas Generales</a></li>
-                    <li><a href="#" class="block px-4 py-2 hover:bg-red-800">Actividades Ilegales</a></li>
-                    <li><a href="#" class="block px-4 py-2 hover:bg-red-800">Comercio</a></li>
-                    <li><a href="#" class="block px-4 py-2 hover:bg-red-800">Reglas Discord</a></li>
+            <li>
+                <button class="w-full text-left font-semibold text-red-500 hover:text-red-300">Normativas</button>
+                <ul class="ml-4 space-y-2 text-sm">
+                    <li><a href="#" class="block hover:text-red-300">Reglas Generales</a></li>
+                    <li><a href="#" class="block hover:text-red-300">Actividades Ilegales</a></li>
+                    <li><a href="#" class="block hover:text-red-300">Comercio</a></li>
+                    <li><a href="#" class="block hover:text-red-300">Reglas Discord</a></li>
                 </ul>
             </li>
             <!-- Controles -->
-            <li class="relative group">
-                <button class="font-semibold text-red-500 hover:text-red-300">Controles</button>
-                <ul class="absolute hidden bg-gray-900 border border-red-600 text-sm mt-2 py-2 w-48 group-hover:block">
-                    <li><a href="#" class="block px-4 py-2 hover:bg-red-800">Comandos del Servidor</a></li>
-                    <li><a href="#" class="block px-4 py-2 hover:bg-red-800">Teclas</a></li>
+            <li>
+                <button class="w-full text-left font-semibold text-red-500 hover:text-red-300">Controles</button>
+                <ul class="ml-4 space-y-2 text-sm">
+                    <li><a href="#" class="block hover:text-red-300">Comandos del Servidor</a></li>
+                    <li><a href="#" class="block hover:text-red-300">Teclas</a></li>
                 </ul>
             </li>
             <!-- Locales -->
-            <li class="relative group">
-                <button class="font-semibold text-red-500 hover:text-red-300">Locales</button>
-                <ul class="absolute hidden bg-gray-900 border border-red-600 text-sm mt-2 py-2 w-48 group-hover:block">
-                    <li><a href="#" class="block px-4 py-2 hover:bg-red-800">Centro de Ciudad</a></li>
-                    <li><a href="#" class="block px-4 py-2 hover:bg-red-800">Plaza de Mercado</a></li>
-                    <li><a href="#" class="block px-4 py-2 hover:bg-red-800">Vanilla Unicorn</a></li>
+            <li>
+                <button class="w-full text-left font-semibold text-red-500 hover:text-red-300">Locales</button>
+                <ul class="ml-4 space-y-2 text-sm">
+                    <li><a href="#" class="block hover:text-red-300">Centro de Ciudad</a></li>
+                    <li><a href="#" class="block hover:text-red-300">Plaza de Mercado</a></li>
+                    <li><a href="#" class="block hover:text-red-300">Vanilla Unicorn</a></li>
                 </ul>
             </li>
             <!-- STAFF -->
@@ -55,7 +55,7 @@
     </nav>
 
     <!-- Contenido principal -->
-    <main class="p-6 mt-20">
+    <main class="pl-64 p-6">
         <h2 class="text-3xl font-bold">Bienvenido a Leyenda RP</h2>
         <p class="text-red-400">Explora nuestras reglas y guías para aprovechar al máximo tu experiencia en el servidor.</p>
     </main>
@@ -65,8 +65,7 @@
         const toggleBtn = document.getElementById('menu-toggle');
 
         toggleBtn.addEventListener('click', () => {
-            menu.classList.toggle('translate-y-0');
-            menu.classList.toggle('-translate-y-full');
+            menu.classList.toggle('-translate-x-full');
         });
     </script>
 
